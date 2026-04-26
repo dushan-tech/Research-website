@@ -77,6 +77,17 @@ document.querySelectorAll('.docs-grid .doc-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
 });
 
+// ===================== METHODOLOGY TABS =====================
+document.querySelectorAll('.mtab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.mtab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.mtab-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+    });
+});
+
 // ===================== CONTACT FORM =====================
 function handleForm(e) {
     e.preventDefault();
