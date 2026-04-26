@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farmer - AI Spare Part Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <a class="logo" href="#home">🌿 Smart<span>Farmer</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#domain" class="dropbtn">Domain ▾</a>
+                <div class="dropdown-content">
+                    <a href="#lit-survey">Literature Survey</a>
+                    <a href="#research-gap">Research Gap</a>
+                    <a href="#research-problem">Research Problem</a>
+                    <a href="#objectives">Objectives</a>
+                    <a href="#methodology">Methodology</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#modules" class="dropbtn">Modules ▾</a>
+                <div class="dropdown-content">
+                    <a href="#module-cv">Computer Vision</a>
+                    <a href="#module-blockchain">Blockchain</a>
+                    <a href="#module-recommender">Recommender</a>
+                    <a href="#module-3d">3D Visualization</a>
+                </div>
+            </li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li class="dropdown">
+                <a href="#milestones" class="dropbtn">Milestones ▾</a>
+                <div class="dropdown-content">
+                    <a href="#milestones">Timeline</a>
+                    <a href="#documents">Documents</a>
+                    <a href="#presentations">Presentations</a>
+                </div>
+            </li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-badge">🚜 AI-Powered Agricultural Technology</div>
+        <h1>Smart <span class="highlight">Farmer</span><br>AI System</h1>
+        <p>Empowering agricultural workers with accessible, mobile-based tools for machinery lifecycle forecasting and intelligent spare part management.</p>
+        <div class="hero-cta">
+            <a href="#domain" class="btn-primary">Explore Research ↓</a>
+            <a href="#documents" class="btn-outline">View Documents</a>
+        </div>
+        <div class="hero-scroll-hint">
+            <div class="scroll-mouse"></div>
+            Scroll to explore
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2: DOMAIN ===================== -->
+    <section id="domain" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">Research Domain</span>
+            <h2>Domain Overview</h2>
+            <p>A comprehensive research initiative combining AI, blockchain, and 3D visualization to modernize agricultural machinery management.</p>
+        </div>
+        <div class="grid-container">
+            <div class="card reveal">
+                <div class="card-icon">🔍</div>
+                <h3>Computer Vision Wear Detection</h3>
+                <p>Utilizing YOLOv8 &amp; MobileNetV2 for identifying mechanical wear on tractor tyres and V-belts with real-time mobile detection.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">🔗</div>
+                <h3>Blockchain Authenticity</h3>
+                <p>A decentralized ledger ensuring spare part transparency, ownership history, and counterfeit prevention via smart contracts.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">🤖</div>
+                <h3>Compatibility Recommender</h3>
+                <p>Dynamic analysis using Random Forest to suggest functionally equivalent spare parts with confidence scoring.</p>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">🧊</div>
+                <h3>3D Visualization</h3>
+                <p>ResNet-50 powered recognition mapped to interactive 3D machine models with rotate, zoom and highlight features.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.1 Literature Survey -->
+    <section id="lit-survey" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">2.1 Literature Survey</span>
+            <h2>Existing Systems & Background</h2>
+            <p>An analysis of current agricultural machinery maintenance approaches and their shortcomings.</p>
+        </div>
+        <div class="two-col reveal">
+            <div class="prose-block">
+                <h3>Existing Systems in Agriculture Maintenance</h3>
+                <p>Existing agricultural machinery maintenance systems largely rely on time-based or manual inspection schedules. Solutions such as FMIS (Farm Management Information Systems) provide basic record-keeping but lack intelligent wear detection capabilities. Industrial IoT platforms used in large-scale farming are cost-prohibitive and inaccessible to smallholder farmers in developing regions.</p>
+                <p>Studies on predictive maintenance in agriculture (Paraforos et al., 2017; Kayode et al., 2020) highlight that reactive maintenance causes up to 40% more downtime than condition-based approaches. However, these studies rely on sensor-heavy hardware setups that are not mobile-friendly.</p>
+            </div>
+            <div class="problems-list">
+                <h3>Key Problems Identified</h3>
+                <div class="problem-item reveal">
+                    <div class="problem-icon">⚠️</div>
+                    <div>
+                        <strong>Manual Inspection</strong>
+                        <p>Farmers rely on visual inspection alone, leading to missed early-stage wear, unexpected breakdowns, and costly emergency repairs.</p>
+                    </div>
+                </div>
+                <div class="problem-item reveal">
+                    <div class="problem-icon">🚫</div>
+                    <div>
+                        <strong>No Traceability</strong>
+                        <p>Spare parts lack verifiable provenance. Counterfeit parts flood rural markets, causing mechanical failures and safety hazards.</p>
+                    </div>
+                </div>
+                <div class="problem-item reveal">
+                    <div class="problem-icon">❓</div>
+                    <div>
+                        <strong>Poor Compatibility Knowledge</strong>
+                        <p>Farmers and local mechanics lack access to compatibility databases, leading to wrong part selection, voided warranties, and repeated failures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.2 Research Gap -->
+    <section id="research-gap" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">2.2 Research Gap</span>
+            <h2>Identified Research Gaps</h2>
+            <p>Critical gaps in the current body of research that this project directly addresses.</p>
+        </div>
+        <div class="gap-grid">
+            <div class="gap-card reveal">
+                <span class="gap-num">01</span>
+                <h3>No Real-Time Mobile Wear Detection</h3>
+                <p>No existing system provides real-time, mobile-based AI detection of mechanical wear specifically for agricultural machinery components such as tyres and V-belts.</p>
+            </div>
+            <div class="gap-card reveal">
+                <span class="gap-num">02</span>
+                <h3>No Trusted Spare Part Tracking</h3>
+                <p>There is no blockchain-based traceability solution designed specifically for agricultural spare parts in developing markets, leaving farmers vulnerable to counterfeit components.</p>
+            </div>
+            <div class="gap-card reveal">
+                <span class="gap-num">03</span>
+                <h3>No Intelligent Compatibility Recommendations</h3>
+                <p>Existing recommendation systems do not account for agricultural machine families, functional equivalence, and multi-factor soft filtering (price, material, brand).</p>
+            </div>
+            <div class="gap-card reveal">
+                <span class="gap-num">04</span>
+                <h3>Lack of Visualization Tools for Farmers</h3>
+                <p>No accessible 3D visualization tool exists that maps detected spare parts to interactive machine models, making diagnosis unintuitive for non-technical farmers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.3 Research Problem -->
+    <section id="research-problem" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">2.3 Research Problem</span>
+            <h2>The Core Problem</h2>
+        </div>
+        <div class="problem-statement reveal">
+            <div class="quote-icon">❝</div>
+            <p>Farmers face unexpected machine failures, counterfeit spare parts, and significant difficulty identifying correct replacements due to a critical lack of intelligent, accessible, and integrated digital tools — resulting in prolonged downtime, financial losses, and reduced agricultural productivity.</p>
+        </div>
+        <div class="impact-grid">
+            <div class="impact-card reveal">
+                <div class="impact-icon">💸</div>
+                <h4>Financial Loss</h4>
+                <p>Unplanned downtime and wrong part purchases cost smallholder farmers significantly during peak harvest seasons.</p>
+            </div>
+            <div class="impact-card reveal">
+                <div class="impact-icon">⏱️</div>
+                <h4>Productivity Loss</h4>
+                <p>Machine downtime during critical farming periods leads directly to crop losses and missed market windows.</p>
+            </div>
+            <div class="impact-card reveal">
+                <div class="impact-icon">🔩</div>
+                <h4>Counterfeit Parts</h4>
+                <p>Fake spare parts cause accelerated mechanical failures, unsafe operating conditions, and voided warranties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.4 Objectives -->
+    <section id="objectives" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">2.4 Research Objectives</span>
+            <h2>Project Objectives</h2>
+        </div>
+        <div class="objectives-layout">
+            <div class="main-objective reveal">
+                <div class="obj-badge">Main Objective</div>
+                <h3>Build an intelligent, integrated system for spare part lifecycle management in agricultural machinery — combining AI wear detection, blockchain traceability, compatibility recommendation, and 3D visualization into a single mobile-accessible platform.</h3>
+            </div>
+            <div class="sub-objectives">
+                <div class="sub-obj reveal">
+                    <span class="sub-num">01</span>
+                    <div>
+                        <h4>Detect Wear Using AI</h4>
+                        <p>Develop a mobile-compatible computer vision module using YOLOv8 and MobileNetV2 to detect early-stage wear on tractor tyres and V-belts.</p>
+                    </div>
+                </div>
+                <div class="sub-obj reveal">
+                    <span class="sub-num">02</span>
+                    <div>
+                        <h4>Ensure Authenticity via Blockchain</h4>
+                        <p>Implement a blockchain-based lifecycle ledger with QR-code identity, smart contracts, and trust scoring for spare part verification.</p>
+                    </div>
+                </div>
+                <div class="sub-obj reveal">
+                    <span class="sub-num">03</span>
+                    <div>
+                        <h4>Recommend Compatible Parts</h4>
+                        <p>Build a multi-stage Random Forest recommendation engine that applies hard and soft filters to suggest compatible spare parts with confidence scores.</p>
+                    </div>
+                </div>
+                <div class="sub-obj reveal">
+                    <span class="sub-num">04</span>
+                    <div>
+                        <h4>Visualize Parts in 3D</h4>
+                        <p>Create an interactive 3D visualization layer powered by ResNet-50 recognition, mapping detected parts to interactive machine models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.5 Methodology -->
+    <section id="methodology" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">2.5 Methodology</span>
+            <h2>Research Methodology</h2>
+            <p>A modular, iterative development approach across four parallel research streams.</p>
+        </div>
+        <div class="method-flow reveal">
+            <div class="method-step">
+                <div class="mstep-num">1</div>
+                <div class="mstep-body">
+                    <h4>Data Collection &amp; Preparation</h4>
+                    <p>Collect labelled image datasets for tractor tyres and V-belts. Aggregate spare part compatibility data. Prepare blockchain test network.</p>
+                </div>
+            </div>
+            <div class="method-arrow">→</div>
+            <div class="method-step">
+                <div class="mstep-num">2</div>
+                <div class="mstep-body">
+                    <h4>Model Development</h4>
+                    <p>Train YOLOv8 &amp; MobileNetV2 for wear detection. Build Random Forest recommender. Fine-tune ResNet-50 for part recognition.</p>
+                </div>
+            </div>
+            <div class="method-arrow">→</div>
+            <div class="method-step">
+                <div class="mstep-num">3</div>
+                <div class="mstep-body">
+                    <h4>System Integration</h4>
+                    <p>Integrate all four modules into a unified FastAPI backend. Connect blockchain layer. Build React/Flutter frontend.</p>
+                </div>
+            </div>
+            <div class="method-arrow">→</div>
+            <div class="method-step">
+                <div class="mstep-num">4</div>
+                <div class="mstep-body">
+                    <h4>Testing &amp; Evaluation</h4>
+                    <p>Evaluate detection accuracy (mAP), recommendation precision, blockchain throughput, and 3D rendering performance on mobile devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3: SYSTEM MODULES ===================== -->
+    <section id="modules" class="content-section dark-section">
+        <div class="section-header reveal">
+            <span class="section-label section-label-light">System Modules</span>
+            <h2 style="color:var(--white)">Four Integrated AI Modules</h2>
+            <p style="color:rgba(255,255,255,0.6)">Each module independently solves a critical problem while contributing to the unified Smart Farmer platform.</p>
+        </div>
+        <div class="modules-overview-grid">
+            <a href="#module-cv" class="module-overview-card reveal">
+                <div class="mod-icon">🔍</div>
+                <h3>Computer Vision</h3>
+                <p>YOLOv8 · MobileNetV2</p>
+            </a>
+            <a href="#module-blockchain" class="module-overview-card reveal">
+                <div class="mod-icon">🔗</div>
+                <h3>Blockchain</h3>
+                <p>Smart Contracts · QR Identity</p>
+            </a>
+            <a href="#module-recommender" class="module-overview-card reveal">
+                <div class="mod-icon">🤖</div>
+                <h3>Recommender</h3>
+                <p>Random Forest · Multi-Filter</p>
+            </a>
+            <a href="#module-3d" class="module-overview-card reveal">
+                <div class="mod-icon">🧊</div>
+                <h3>3D Visualization</h3>
+                <p>ResNet-50 · Interactive Models</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3.1 Computer Vision -->
+    <section id="module-cv" class="content-section">
+        <div class="module-header reveal">
+            <div class="module-tag">Module 3.1</div>
+            <h2>Computer Vision Wear Detection</h2>
+            <p>Real-time, mobile-friendly AI detection of mechanical wear on agricultural machinery components.</p>
+        </div>
+        <div class="module-layout">
+            <div class="module-info">
+                <div class="info-block reveal">
+                    <h3>🚨 Problem</h3>
+                    <p>Farmers cannot detect early-stage mechanical wear without specialist knowledge. By the time damage is visible to the naked eye, it is often too late — resulting in sudden breakdowns during critical farming operations.</p>
+                </div>
+                <div class="info-block reveal">
+                    <h3>📦 Dataset</h3>
+                    <ul class="styled-list">
+                        <li>Tractor tyre wear images (labelled: good / worn / critical)</li>
+                        <li>V-belt degradation images (labelled: intact / cracked / broken)</li>
+                        <li>Augmented with rotation, noise, and brightness variations</li>
+                    </ul>
+                </div>
+                <div class="info-block reveal">
+                    <h3>🧠 Models</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">MobileNetV2 — Classification</span>
+                        <span class="model-tag">YOLOv8 — Object Detection</span>
+                    </div>
+                </div>
+            </div>
+            <div class="module-flow">
+                <h3 class="flow-title reveal">Detection Flow</h3>
+                <div class="flow-steps">
+                    <div class="flow-step reveal"><span class="fstep-num">1</span><div><strong>User uploads image</strong><p>Via mobile app or web interface</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">2</span><div><strong>YOLOv8 scans image</strong><p>Object detection pass identifies component regions</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">3</span><div><strong>Damage detected</strong><p>MobileNetV2 classifies severity level</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">4</span><div><strong>Bounding boxes drawn</strong><p>Detected regions highlighted with confidence scores</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">5</span><div><strong>Result displayed</strong><p>Wear level, recommendation, and action alert shown to farmer</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="highlight-pills reveal">
+            <span class="pill pill-green">✅ Real-time Detection</span>
+            <span class="pill pill-green">✅ Mobile-Friendly</span>
+            <span class="pill pill-green">✅ Visual Proof of Damage</span>
+            <span class="pill pill-green">✅ Works Offline (Edge Mode)</span>
+        </div>
+        <div class="screenshot-placeholder reveal">
+            <div class="ss-icon">🖼️</div>
+            <p>Add your detection result screenshots here</p>
+        </div>
+    </section>
+
+    <!-- 3.2 Blockchain -->
+    <section id="module-blockchain" class="content-section grey-bg">
+        <div class="module-header reveal">
+            <div class="module-tag">Module 3.2</div>
+            <h2>Blockchain Lifecycle System</h2>
+            <p>A decentralized trust layer ensuring every spare part has a verified, immutable digital identity.</p>
+        </div>
+        <div class="module-layout">
+            <div class="module-info">
+                <div class="info-block reveal">
+                    <h3>🚨 Problem</h3>
+                    <p>Counterfeit spare parts are rampant in rural agricultural markets. Without verifiable provenance, farmers unknowingly install fake components that fail prematurely and create safety hazards.</p>
+                </div>
+                <div class="info-block reveal">
+                    <h3>✨ Features</h3>
+                    <ul class="styled-list">
+                        <li>Unique QR code issued per spare part at manufacture</li>
+                        <li>Immutable blockchain ledger records every ownership transfer</li>
+                        <li>Full lifecycle history accessible via QR scan</li>
+                        <li>Trust score computed from provenance data</li>
+                        <li>Off-chain storage for large files (warranty docs, images)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="module-flow">
+                <h3 class="flow-title reveal">Smart Contract Logic</h3>
+                <div class="flow-steps">
+                    <div class="flow-step reveal"><span class="fstep-num">1</span><div><strong>Part manufactured</strong><p>Digital identity minted on blockchain with QR code</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">2</span><div><strong>Ownership transfer</strong><p>Smart contract records distributor → retailer → farmer chain</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">3</span><div><strong>Warranty validation</strong><p>Contract auto-validates warranty based on transfer timestamps</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">4</span><div><strong>Maintenance logged</strong><p>Service events appended to immutable ledger</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">5</span><div><strong>Trust score generated</strong><p>Algorithm computes authenticity score from full history</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="highlight-pills reveal">
+            <span class="pill pill-green">✅ QR-Based Identity</span>
+            <span class="pill pill-green">✅ Immutable Ledger</span>
+            <span class="pill pill-green">✅ Smart Contracts</span>
+            <span class="pill pill-green">✅ Off-Chain Storage</span>
+            <span class="pill pill-green">✅ Trust Score System</span>
+        </div>
+        <div class="screenshot-placeholder reveal">
+            <div class="ss-icon">🖼️</div>
+            <p>Add your blockchain interface screenshots here</p>
+        </div>
+    </section>
+
+    <!-- 3.3 Recommender System -->
+    <section id="module-recommender" class="content-section">
+        <div class="module-header reveal">
+            <div class="module-tag">Module 3.3</div>
+            <h2>Compatibility Recommender System</h2>
+            <p>A multi-stage machine learning pipeline that intelligently recommends compatible spare parts.</p>
+        </div>
+        <div class="module-layout">
+            <div class="module-info">
+                <div class="info-block reveal">
+                    <h3>🚨 Problem</h3>
+                    <p>Farmers and local mechanics frequently select wrong spare parts due to lack of compatibility knowledge, leading to mechanical failures, wasted expenditure, and prolonged downtime.</p>
+                </div>
+                <div class="info-block reveal">
+                    <h3>📊 Data Features Used</h3>
+                    <div class="feature-tags">
+                        <span class="ftag">Part Name</span><span class="ftag">Brand</span><span class="ftag">Category</span>
+                        <span class="ftag">Machine Model</span><span class="ftag">Material</span><span class="ftag">Diameter</span>
+                        <span class="ftag">Lifespan</span><span class="ftag">Price</span><span class="ftag">Function Type</span>
+                    </div>
+                </div>
+            </div>
+            <div class="module-flow">
+                <h3 class="flow-title reveal">4-Stage Pipeline</h3>
+                <div class="flow-steps">
+                    <div class="flow-step reveal"><span class="fstep-num">1</span><div><strong>Data Cleaning</strong><p>Remove duplicates · fix missing values · normalize features</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">2</span><div><strong>Compatibility Modelling</strong><p>Map machine family · function type · substitute levels</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">3</span><div><strong>Recommendation Logic</strong><p><em>Hard filters:</em> category, machine type · <em>Soft filters:</em> price, material</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">4</span><div><strong>Random Forest Model</strong><p>Predicts compatibility score → ranked recommendation list with confidence &amp; explanation</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="highlight-pills reveal">
+            <span class="pill pill-green">✅ Multi-Factor Filtering</span>
+            <span class="pill pill-green">✅ Confidence Score</span>
+            <span class="pill pill-green">✅ Human-Readable Explanation</span>
+            <span class="pill pill-green">✅ Random Forest ML</span>
+        </div>
+        <div class="screenshot-placeholder reveal">
+            <div class="ss-icon">🖼️</div>
+            <p>Add your recommender system screenshots here</p>
+        </div>
+    </section>
+
+    <!-- 3.4 3D Visualization -->
+    <section id="module-3d" class="content-section grey-bg">
+        <div class="module-header reveal">
+            <div class="module-tag">Module 3.4</div>
+            <h2>Image Recognition + 3D Visualization</h2>
+            <p>Mapping AI-recognized spare parts to interactive 3D machine models for intuitive farmer guidance.</p>
+        </div>
+        <div class="module-layout">
+            <div class="module-info">
+                <div class="info-block reveal">
+                    <h3>🧠 Model</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">ResNet-50 — Image Recognition</span>
+                    </div>
+                </div>
+                <div class="info-block reveal">
+                    <h3>✨ Features</h3>
+                    <ul class="styled-list">
+                        <li>Rotate &amp; zoom interactive 3D machine models</li>
+                        <li>Highlight the specific detected worn part in 3D</li>
+                        <li>AI-generated video explanation of the issue</li>
+                        <li>Parts catalogue linked to 3D model nodes</li>
+                        <li>Mobile-optimized WebGL rendering</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="module-flow">
+                <h3 class="flow-title reveal">Visualization Flow</h3>
+                <div class="flow-steps">
+                    <div class="flow-step reveal"><span class="fstep-num">1</span><div><strong>User uploads image</strong><p>Photo of suspected worn or broken component</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">2</span><div><strong>Part detected</strong><p>ResNet-50 classifies the component type with confidence score</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">3</span><div><strong>Confidence displayed</strong><p>Classification result shown with probability breakdown</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">4</span><div><strong>3D model loaded</strong><p>Corresponding machine 3D model rendered in browser</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step reveal"><span class="fstep-num">5</span><div><strong>Part highlighted</strong><p>Detected part highlighted on 3D model with repair guidance</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="highlight-pills reveal">
+            <span class="pill pill-green">✅ ResNet-50 Recognition</span>
+            <span class="pill pill-green">✅ Interactive 3D Models</span>
+            <span class="pill pill-green">✅ Part Highlighting</span>
+            <span class="pill pill-green">✅ AI Video Explanation</span>
+        </div>
+        <div class="screenshot-placeholder reveal">
+            <div class="ss-icon">🖼️</div>
+            <p>Add your 3D visualization screenshots here</p>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 4: TECHNOLOGIES ===================== -->
+    <section id="technologies" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">Section 4</span>
+            <h2>Technologies Used</h2>
+            <p>The full technology stack powering the Smart Farmer AI platform.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-category reveal">
+                <div class="tech-cat-header">
+                    <span class="tech-cat-icon">🖥️</span>
+                    <h3>Frontend</h3>
+                </div>
+                <div class="tech-items">
+                    <div class="tech-item"><span class="tech-dot"></span>React (Web Application)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Flutter (Mobile Application)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>WebGL / Three.js (3D Rendering)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>TailwindCSS (Styling)</div>
+                </div>
+            </div>
+            <div class="tech-category reveal">
+                <div class="tech-cat-header">
+                    <span class="tech-cat-icon">⚙️</span>
+                    <h3>Backend</h3>
+                </div>
+                <div class="tech-items">
+                    <div class="tech-item"><span class="tech-dot"></span>FastAPI (REST API)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>PostgreSQL (Relational DB)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Redis (Caching Layer)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Docker (Containerisation)</div>
+                </div>
+            </div>
+            <div class="tech-category reveal">
+                <div class="tech-cat-header">
+                    <span class="tech-cat-icon">🧠</span>
+                    <h3>AI Models</h3>
+                </div>
+                <div class="tech-items">
+                    <div class="tech-item"><span class="tech-dot"></span>YOLOv8 (Object Detection)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>MobileNetV2 (Classification)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>ResNet-50 (Part Recognition)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Random Forest (Recommender)</div>
+                </div>
+            </div>
+            <div class="tech-category reveal">
+                <div class="tech-cat-header">
+                    <span class="tech-cat-icon">🔗</span>
+                    <h3>Blockchain</h3>
+                </div>
+                <div class="tech-items">
+                    <div class="tech-item"><span class="tech-dot"></span>Solidity Smart Contracts</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Ethereum / Polygon Network</div>
+                    <div class="tech-item"><span class="tech-dot"></span>IPFS (Decentralised Storage)</div>
+                    <div class="tech-item"><span class="tech-dot"></span>Web3.js (Blockchain Interface)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== BONUS: SYSTEM ARCHITECTURE ===================== -->
+    <section id="architecture" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">Bonus</span>
+            <h2>System Architecture</h2>
+            <p>High-level overview of the Smart Farmer platform architecture and component interactions.</p>
+        </div>
+        <div class="architecture-diagram reveal">
+            <div class="arch-layer">
+                <div class="arch-layer-label">Frontend Layer</div>
+                <div class="arch-boxes">
+                    <div class="arch-box">React Web App</div>
+                    <div class="arch-box">Flutter Mobile</div>
+                </div>
+            </div>
+            <div class="arch-arrow">↓ API Calls</div>
+            <div class="arch-layer">
+                <div class="arch-layer-label">API Gateway</div>
+                <div class="arch-boxes">
+                    <div class="arch-box arch-box-accent">FastAPI Backend</div>
+                </div>
+            </div>
+            <div class="arch-arrow">↓ Module Routing</div>
+            <div class="arch-layer">
+                <div class="arch-layer-label">AI Modules</div>
+                <div class="arch-boxes">
+                    <div class="arch-box">CV Detection</div>
+                    <div class="arch-box">Recommender</div>
+                    <div class="arch-box">3D Visualizer</div>
+                    <div class="arch-box">Blockchain</div>
+                </div>
+            </div>
+            <div class="arch-arrow">↓ Data Layer</div>
+            <div class="arch-layer">
+                <div class="arch-layer-label">Storage Layer</div>
+                <div class="arch-boxes">
+                    <div class="arch-box">PostgreSQL</div>
+                    <div class="arch-box">IPFS</div>
+                    <div class="arch-box">Blockchain Ledger</div>
+                </div>
+            </div>
+        </div>
+        <div class="dfd-placeholder reveal">
+            <div class="ss-icon">📐</div>
+            <p>Add your System Architecture Diagram / Data Flow Diagram image here</p>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 5: MILESTONES ===================== -->
+    <section id="milestones" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">Section 5</span>
+            <h2>Project Milestones</h2>
+            <p>Key assessments and deliverables throughout the research lifecycle.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-header">
+                        <h3>Project Proposal</h3>
+                        <span class="badge">10%</span>
+                    </div>
+                    <p class="tl-date">📅 Add your date here</p>
+                    <p>Initial project proposal submission covering problem statement, objectives, methodology, and literature survey.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-header">
+                        <h3>Progress Presentation 1</h3>
+                        <span class="badge">15%</span>
+                    </div>
+                    <p class="tl-date">📅 Add your date here</p>
+                    <p>First progress review covering initial model development, dataset preparation, and early prototype results.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-header">
+                        <h3>Progress Presentation 2</h3>
+                        <span class="badge">25%</span>
+                    </div>
+                    <p class="tl-date">📅 Add your date here</p>
+                    <p>Second review covering integrated system demo, model performance metrics, and user testing feedback.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <div class="tl-header">
+                        <h3>Final Evaluation</h3>
+                        <span class="badge">50%</span>
+                    </div>
+                    <p class="tl-date">📅 Add your date here</p>
+                    <p>Final system submission with complete documentation, deployed application, and research paper.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="tl-dot tl-dot-accent"></div>
+                <div class="tl-content">
+                    <div class="tl-header">
+                        <h3>Viva</h3>
+                        <span class="badge badge-accent">Final</span>
+                    </div>
+                    <p class="tl-date">📅 Add your date here</p>
+                    <p>Oral examination and live demonstration of the Smart Farmer AI system before the evaluation panel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 6: DOCUMENTS ===================== -->
+    <section id="documents" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">Section 6</span>
+            <h2>Documents</h2>
+            <p>All research documents, reports, and logbooks.</p>
+        </div>
+        <div class="docs-grid">
+            <a href="assets/docs/proposal.pdf" class="doc-card reveal">
+                <div class="doc-icon">📋</div>
+                <div class="doc-info"><span>Project Proposal</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/final-report.pdf" class="doc-card reveal">
+                <div class="doc-icon">📄</div>
+                <div class="doc-info"><span>Final Report</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/report-cv.pdf" class="doc-card reveal">
+                <div class="doc-icon">📝</div>
+                <div class="doc-info"><span>Individual Report — CV Module</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/report-blockchain.pdf" class="doc-card reveal">
+                <div class="doc-icon">📝</div>
+                <div class="doc-info"><span>Individual Report — Blockchain</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/report-recommender.pdf" class="doc-card reveal">
+                <div class="doc-icon">📝</div>
+                <div class="doc-info"><span>Individual Report — Recommender</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/report-3d.pdf" class="doc-card reveal">
+                <div class="doc-icon">📝</div>
+                <div class="doc-info"><span>Individual Report — 3D Visualization</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/docs/logbook.pdf" class="doc-card reveal">
+                <div class="doc-icon">📔</div>
+                <div class="doc-info"><span>Project Logbook</span><small>Add your file here</small></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 7: PRESENTATIONS ===================== -->
+    <section id="presentations" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">Section 7</span>
+            <h2>Presentations</h2>
+            <p>Slide decks from all project assessments and presentations.</p>
+        </div>
+        <div class="docs-grid">
+            <a href="assets/slides/proposal-slides.pptx" class="doc-card reveal">
+                <div class="doc-icon">📊</div>
+                <div class="doc-info"><span>Proposal Slides</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/slides/progress1-slides.pptx" class="doc-card reveal">
+                <div class="doc-icon">📊</div>
+                <div class="doc-info"><span>Progress 1 Slides</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/slides/progress2-slides.pptx" class="doc-card reveal">
+                <div class="doc-icon">📊</div>
+                <div class="doc-info"><span>Progress 2 Slides</span><small>Add your file here</small></div>
+            </a>
+            <a href="assets/slides/final-slides.pptx" class="doc-card reveal">
+                <div class="doc-icon">🎯</div>
+                <div class="doc-info"><span>Final Presentation Slides</span><small>Add your file here</small></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 8: ABOUT US ===================== -->
+    <section id="about" class="content-section grey-bg">
+        <div class="section-header reveal">
+            <span class="section-label">Section 8</span>
+            <h2>Meet Our Team</h2>
+            <p>Four researchers, each leading a critical module of the Smart Farmer AI platform.</p>
+        </div>
+        <div class="team-grid-new">
+
+            <!-- Member 1 -->
+            <div class="member-card reveal" data-module="cv">
+                <div class="member-card-top">
+                    <div class="member-module-icon">🔍</div>
+                    <div class="member-photo-wrap">
+                        <img src="assets/images/dushan.png" alt="Dushan Chanuka">
+                    </div>
+                    <div class="member-accent-bar"></div>
+                </div>
+                <div class="member-card-body">
+                    <h3>Dushan Chanuka</h3>
+                    <span class="member-role-badge">AI Spare Part Lifecycle Forecasting System Developer</span>
+                    <div class="member-module-chip">🔍 Computer Vision Module</div>
+                    <p class="member-contrib-text">Leads the Computer Vision module. Responsible for YOLOv8 and MobileNetV2 model training, dataset labelling, and mobile integration of real-time wear detection.</p>
+                    <div class="member-tech-stack">
+                        <span>YOLOv8</span><span>MobileNetV2</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card reveal" data-module="blockchain">
+                <div class="member-card-top">
+                    <div class="member-module-icon">🔗</div>
+                    <div class="member-photo-wrap member-photo-placeholder">
+                        <span>Add Photo</span>
+                    </div>
+                    <div class="member-accent-bar"></div>
+                </div>
+                <div class="member-card-body">
+                    <h3>Add Team Member</h3>
+                    <span class="member-role-badge">Blockchain Developer</span>
+                    <div class="member-module-chip">🔗 Blockchain Module</div>
+                    <p class="member-contrib-text">Add your contribution description here. Describe your role in the blockchain lifecycle system, smart contract development, and QR identity implementation.</p>
+                    <div class="member-tech-stack">
+                        <span>Solidity</span><span>Web3.js</span><span>IPFS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card reveal" data-module="recommender">
+                <div class="member-card-top">
+                    <div class="member-module-icon">🤖</div>
+                    <div class="member-photo-wrap member-photo-placeholder">
+                        <span>Add Photo</span>
+                    </div>
+                    <div class="member-accent-bar"></div>
+                </div>
+                <div class="member-card-body">
+                    <h3>Add Team Member</h3>
+                    <span class="member-role-badge">Recommender System Developer</span>
+                    <div class="member-module-chip">🤖 Recommender Module</div>
+                    <p class="member-contrib-text">Add your contribution description here. Describe your role in the compatibility recommender, Random Forest model development, and data pipeline creation.</p>
+                    <div class="member-tech-stack">
+                        <span>Random Forest</span><span>scikit-learn</span><span>FastAPI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="member-card reveal" data-module="3d">
+                <div class="member-card-top">
+                    <div class="member-module-icon">🧊</div>
+                    <div class="member-photo-wrap member-photo-placeholder">
+                        <span>Add Photo</span>
+                    </div>
+                    <div class="member-accent-bar"></div>
+                </div>
+                <div class="member-card-body">
+                    <h3>Add Team Member</h3>
+                    <span class="member-role-badge">Visualization Developer</span>
+                    <div class="member-module-chip">🧊 3D Visualization Module</div>
+                    <p class="member-contrib-text">Add your contribution description here. Describe your role in the ResNet-50 recognition system, 3D model integration, and interactive visualization UI.</p>
+                    <div class="member-tech-stack">
+                        <span>ResNet-50</span><span>Three.js</span><span>WebGL</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 9: CONTACT ===================== -->
+    <section id="contact" class="content-section">
+        <div class="section-header reveal">
+            <span class="section-label">Section 9</span>
+            <h2>Contact Us</h2>
+            <p>Reach out to the Smart Farmer research team.</p>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-info-col">
+                <div class="contact-grid">
+                    <div class="contact-card reveal">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <p class="contact-label">General Enquiries</p>
+                            <p>contact@smartfarmer.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card reveal">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <p class="contact-label">Research Lead</p>
+                            <p>Add your email here</p>
+                        </div>
+                    </div>
+                    <div class="contact-card reveal">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <p class="contact-label">Phone</p>
+                            <p>+94 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="contact-card reveal">
+                        <div class="contact-icon">🏛️</div>
+                        <div>
+                            <p class="contact-label">Institution</p>
+                            <p>Add your university name here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-col reveal">
+                <form class="contact-form" onsubmit="handleForm(event)">
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="What is this about?">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message ✉️</button>
+                    <p class="form-note" id="formMsg"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#domain">Domain</a>
+            <a href="#modules">Modules</a>
+            <a href="#milestones">Milestones</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>© 2026 <span>Smart Farmer</span> Research Project · All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
