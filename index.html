@@ -111,45 +111,45 @@
 
             <div class="lit-card reveal">
                 <div class="lit-card-header" style="background:linear-gradient(135deg,#1a6b3c,#28a85a)">
-                    <span class="lit-num">C1</span>
-                    <div><h3>Image Recognition &amp; 3D Visualization</h3><p>ResNet-50 · Transfer Learning · Three.js</p></div>
+                    <span class="lit-num">01</span>
+                    <div><h3>3D Visualization &amp; Identification</h3><p>ResNet-50 · Transfer Learning · Three.js</p></div>
                 </div>
                 <div class="lit-card-body">
                     <p>Computer vision techniques such as CNNs have significantly improved object classification tasks. Models like ResNet-50 are widely used due to their ability to extract complex visual features. Transfer learning has further improved performance by enabling models to adapt to domain-specific datasets with limited data.</p>
-                    <p>However, most studies focus only on classification and ignore spatial context. Visualization techniques such as 3D modeling are used in engineering but are not integrated with AI recognition systems.</p>
+                    <p>However, most studies focus only on classification and ignore spatial context. Visualization techniques such as 3D modeling are used in engineering but are rarely integrated with AI recognition systems for agriculture.</p>
                 </div>
             </div>
 
             <div class="lit-card reveal">
                 <div class="lit-card-header" style="background:linear-gradient(135deg,#b85c00,#e07820)">
-                    <span class="lit-num">C2</span>
-                    <div><h3>Computer Vision Wear Detection</h3><p>YOLOv8 · MobileNetV2 · TFLite</p></div>
+                    <span class="lit-num">02</span>
+                    <div><h3>Spare Part Lifecycle Forecasting</h3><p>YOLOv8 · MobileNetV2 · Random Forest · RUL</p></div>
                 </div>
                 <div class="lit-card-body">
-                    <p>Early approaches used classification models like MobileNetV2 for wear detection but were limited to whole-image predictions. Recent advancements introduced object detection models (YOLO), which allow localization of defects, detection of multiple defects, and improved accuracy and usability.</p>
-                    <p>However, many systems still lack integration with lifecycle forecasting and real-world agricultural datasets.</p>
-                </div>
-            </div>
-
-            <div class="lit-card reveal">
-                <div class="lit-card-header" style="background:linear-gradient(135deg,#1a3a6b,#2866c9)">
-                    <span class="lit-num">C3</span>
-                    <div><h3>Blockchain Verification &amp; Traceability</h3><p>Hyperledger Fabric · Smart Contracts · QR</p></div>
-                </div>
-                <div class="lit-card-body">
-                    <p>Blockchain technology has been widely used for secure data storage, transparency, and traceability. Hyperledger Fabric provides a permissioned blockchain framework suitable for enterprise applications.</p>
-                    <p>QR-based systems are also used for product verification but lack secure backend integration. Existing supply chains remain centralized and vulnerable to data manipulation and counterfeit products.</p>
+                    <p>Early approaches used classification models like MobileNetV2 for wear detection but were limited to whole-image predictions. Recent advancements introduced object detection models (YOLOv8), which allow localization of defects and detection of multiple damage areas simultaneously.</p>
+                    <p>However, many systems still lack integration with lifecycle forecasting pipelines and real-world agricultural datasets, leaving proactive maintenance unsupported.</p>
                 </div>
             </div>
 
             <div class="lit-card reveal">
                 <div class="lit-card-header" style="background:linear-gradient(135deg,#5a1a6b,#9428c9)">
-                    <span class="lit-num">C4</span>
-                    <div><h3>Spare Part Lifecycle Forecasting</h3><p>Random Forest · Predictive ML · RUL Estimation</p></div>
+                    <span class="lit-num">03</span>
+                    <div><h3>Dynamic Compatibility Recommender</h3><p>Random Forest · Semantic Similarity · Rule-Based Filtering</p></div>
                 </div>
                 <div class="lit-card-body">
-                    <p>Predictive maintenance systems use machine learning, sensor data, and historical usage to forecast failures. However, agricultural systems lack structured datasets and integrated AI solutions.</p>
-                    <p>Many forecasting systems are designed for industrial environments, not real-world farming conditions, leaving a critical gap in proactive maintenance for smallholder farmers.</p>
+                    <p>Spare part recommendation systems have traditionally relied on catalogue matching and manual lookup. Recent research explores machine learning approaches using feature similarity and rule-based filtering for compatibility determination.</p>
+                    <p>However, existing systems lack confidence-driven ranking, semantic similarity analysis, and explainable outputs tailored to agricultural machinery contexts.</p>
+                </div>
+            </div>
+
+            <div class="lit-card reveal">
+                <div class="lit-card-header" style="background:linear-gradient(135deg,#1a3a6b,#2866c9)">
+                    <span class="lit-num">04</span>
+                    <div><h3>Blockchain Verification &amp; Traceability</h3><p>Hyperledger Fabric · Smart Contracts · QR · JWT</p></div>
+                </div>
+                <div class="lit-card-body">
+                    <p>Blockchain technology has been widely used for secure data storage, transparency, and traceability. Hyperledger Fabric provides a permissioned blockchain framework suitable for enterprise-level supply chain applications.</p>
+                    <p>QR-based systems are used for product verification but lack secure backend integration and ownership tracking. Existing supply chains remain centralized and vulnerable to counterfeit products and data manipulation.</p>
                 </div>
             </div>
 
@@ -166,23 +166,23 @@
         <div class="gap-grid">
             <div class="gap-card reveal">
                 <span class="gap-num">01</span>
-                <h3>No Integrated Image Recognition + 3D Visualization</h3>
-                <p>Existing computer vision systems for spare part identification only classify component names. There is no integrated system combining AI image recognition with interactive 3D visualization for intuitive spatial understanding.</p>
+                <h3>3D Visualization &amp; Identification — No Spatial Context</h3>
+                <p>Existing computer vision systems for spare part identification only classify component names. There is no integrated system combining AI image recognition with interactive 3D visualization to provide spatial understanding of where a part is located within the machine.</p>
             </div>
             <div class="gap-card reveal">
                 <span class="gap-num">02</span>
-                <h3>No Spatially-Aware Wear Defect Detection</h3>
-                <p>Most wear detection systems use classification models that cannot localize defects, detect multiple damages simultaneously, or provide actionable maintenance outputs for real-world agricultural machinery.</p>
+                <h3>Lifecycle Forecasting — No Agricultural Predictive Maintenance</h3>
+                <p>Most wear detection systems use classification models that cannot localize defects or integrate with forecasting pipelines. There is no predictive model that combines wear data and usage data to estimate Remaining Useful Life for agricultural spare parts.</p>
             </div>
             <div class="gap-card reveal">
                 <span class="gap-num">03</span>
-                <h3>No Decentralized Spare Part Verification</h3>
-                <p>Current spare part supply chains lack transparency, secure verification, and ownership tracking. Centralized systems are vulnerable to data manipulation, counterfeit products, and fragmented records.</p>
+                <h3>Compatibility Recommender — No Intelligent Multi-Factor System</h3>
+                <p>Spare part selection relies on manual lookup or simple catalogue matching. There is no intelligent system that applies rule-based filtering, semantic similarity, and confidence-driven ranking to recommend functionally equivalent parts.</p>
             </div>
             <div class="gap-card reveal">
                 <span class="gap-num">04</span>
-                <h3>No Predictive Lifecycle Forecasting for Agriculture</h3>
-                <p>There is a lack of predictive models that combine wear data, usage data, and environmental factors to forecast spare part lifecycle specifically for agricultural real-world conditions.</p>
+                <h3>Blockchain Traceability — No Decentralized Verification</h3>
+                <p>Current spare part supply chains lack transparency, secure verification, and ownership tracking. Centralized systems are vulnerable to data manipulation, counterfeit products, and fragmented lifecycle records with no immutable audit trail.</p>
             </div>
         </div>
     </section>
@@ -236,29 +236,29 @@
                 <div class="sub-obj reveal">
                     <span class="sub-num">01</span>
                     <div>
-                        <h4>Image Recognition &amp; 3D Visualization (C1)</h4>
-                        <p>Develop a ResNet-50 image recognition model using transfer learning. Integrate classification results with interactive 3D machine models to provide intuitive spatial understanding for users.</p>
+                        <h4>3D Visualization &amp; Identification</h4>
+                        <p>Develop a ResNet-50 image recognition model using transfer learning. Integrate classification results with interactive 3D machine models to provide intuitive spatial understanding of spare part location and context.</p>
                     </div>
                 </div>
                 <div class="sub-obj reveal">
                     <span class="sub-num">02</span>
                     <div>
-                        <h4>Computer Vision Wear Detection (C2)</h4>
-                        <p>Develop a two-phase wear detection system — MobileNetV2 for classification and YOLOv8 for spatial defect localization — enabling accurate, mobile-compatible predictive maintenance.</p>
+                        <h4>Spare Part Lifecycle Forecasting</h4>
+                        <p>Build a predictive ML model (YOLOv8 + MobileNetV2 + Random Forest) integrating wear detection outputs and usage data to estimate Remaining Useful Life (RUL) and provide proactive maintenance recommendations.</p>
                     </div>
                 </div>
                 <div class="sub-obj reveal">
                     <span class="sub-num">03</span>
                     <div>
-                        <h4>Blockchain Verification &amp; Traceability (C3)</h4>
-                        <p>Implement a Hyperledger Fabric blockchain with QR-based authentication, smart contracts for ownership transfer, and a PostgreSQL-backed API for secure spare part lifecycle traceability.</p>
+                        <h4>Dynamic Compatibility Recommender</h4>
+                        <p>Design a multi-stage recommendation engine applying rule-based filtering, semantic similarity analysis, and confidence-driven Random Forest ranking to identify reliable and functionally equivalent spare parts.</p>
                     </div>
                 </div>
                 <div class="sub-obj reveal">
                     <span class="sub-num">04</span>
                     <div>
-                        <h4>Spare Part Lifecycle Forecasting (C4)</h4>
-                        <p>Build a predictive ML model integrating wear detection outputs and usage data to estimate Remaining Useful Life (RUL) and provide proactive maintenance recommendations.</p>
+                        <h4>Blockchain Verification &amp; Traceability</h4>
+                        <p>Implement a Hyperledger Fabric blockchain with JWT-secured QR authentication, smart contracts (RegisterPart, VerifyPart, TransferOwnership), and a FastAPI-backed system for immutable spare part lifecycle traceability.</p>
                     </div>
                 </div>
             </div>
