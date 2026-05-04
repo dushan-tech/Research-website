@@ -39,7 +39,6 @@
             <li class="dropdown">
                 <a href="#milestones" class="dropbtn">Milestones ▾</a>
                 <div class="dropdown-content">
-                    <a href="#milestones">Timeline</a>
                     <a href="#documents">Documents</a>
                     <a href="#presentations">Presentations</a>
                 </div>
@@ -665,51 +664,14 @@
             <h2>System Architecture</h2>
             <p>High-level overview of the Smart Farmer platform architecture and component interactions.</p>
         </div>
-        <div class="architecture-diagram reveal">
-            <div class="arch-layer">
-                <div class="arch-layer-label">Frontend Layer</div>
-                <div class="arch-boxes">
-                    <div class="arch-box">React Web App</div>
-                    <div class="arch-box">Flutter Mobile</div>
-                </div>
-            </div>
-            <div class="arch-arrow">&#8595; API Calls</div>
-            <div class="arch-layer">
-                <div class="arch-layer-label">API Gateway</div>
-                <div class="arch-boxes">
-                    <div class="arch-box arch-box-accent">FastAPI Backend</div>
-                </div>
-            </div>
-            <div class="arch-arrow">&#8595; Module Routing</div>
-            <div class="arch-layer">
-                <div class="arch-layer-label">AI Modules</div>
-                <div class="arch-boxes">
-                    <div class="arch-box">CV Detection</div>
-                    <div class="arch-box">Recommender</div>
-                    <div class="arch-box">3D Visualizer</div>
-                    <div class="arch-box">Blockchain</div>
-                </div>
-            </div>
-            <div class="arch-arrow">&#8595; Data Layer</div>
-            <div class="arch-layer">
-                <div class="arch-layer-label">Storage Layer</div>
-                <div class="arch-boxes">
-                    <div class="arch-box">PostgreSQL</div>
-                    <div class="arch-box">IPFS</div>
-                    <div class="arch-box">Blockchain Ledger</div>
-                </div>
-            </div>
+        <div class="architecture-diagram-container reveal" style="text-align: center; padding: 40px 0;">
+            <img src="assets/images/arcitecture-diagram.jpeg" alt="Smart Farmer System Architecture" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
         </div>
-        <!-- dfd placeholder – uncomment when ready
-        <div class="dfd-placeholder reveal">
-            <div class="ss-icon">&#128247;</div>
-            <p>Add your System Architecture Diagram / Data Flow Diagram image here</p>
-        </div>
-        -->
+    </section>
     </section>
 
     <!-- ===================== SECTION 5: MILESTONES ===================== -->
-    <section id="milestones" class="content-section">
+    <section id="milestones" class="content-section" style="display: none;">
         <div class="section-header reveal">
             <span class="section-label">Section 5</span>
             <h2>Project Milestones</h2>
@@ -782,33 +744,33 @@
             <p>All research documents, reports, and logbooks.</p>
         </div>
         <div class="docs-grid">
-            <a href="assets/docs/proposal.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/project_proposal.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128220;</div>
-                <div class="doc-info"><span>Project Proposal</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Project Proposal</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/final-report.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/final_report_25-26j_395.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128221;</div>
-                <div class="doc-info"><span>Final Report</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Final Report</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/report-cv.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/Smart_Farmer_It22137128_individual_lifecycleforecasting.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128222;</div>
-                <div class="doc-info"><span>Individual Report — CV Module</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Individual Report - Lifecycle Forecasting</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/report-blockchain.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/Smart_Farmer_IT22222190_Individual_report_blockchain.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128222;</div>
-                <div class="doc-info"><span>Individual Report — Blockchain</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Individual Report - Blockchain</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/report-recommender.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/Dynamic_Compatibility_Recommender_Individual_Final_Report_Draft_IT22347930.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128222;</div>
-                <div class="doc-info"><span>Individual Report — Recommender</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Individual Report - Recommender</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/report-3d.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/SmartFarmer_IT22124876_spareparts_identification.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128222;</div>
-                <div class="doc-info"><span>Individual Report — 3D Visualization</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Individual Report - 3D Visualization</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/docs/logbook.pdf" class="doc-card reveal">
+            <a href="assets/docs/Documents/logbook_it22137128.pdf" download class="doc-card reveal">
                 <div class="doc-icon">&#128218;</div>
-                <div class="doc-info"><span>Project Logbook</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Project Logbook</span><small>Download PDF</small></div>
             </a>
         </div>
     </section>
@@ -821,21 +783,21 @@
             <p>Slide decks from all project assessments and presentations.</p>
         </div>
         <div class="docs-grid">
-            <a href="assets/slides/proposal-slides.pptx" class="doc-card reveal">
-                <div class="doc-icon">&#128224;</div>
-                <div class="doc-info"><span>Proposal Slides</span><small>Add your file here</small></div>
+            <a href="assets/docs/Presentations/Presentation1.pdf" download class="doc-card reveal">
+                <div class="doc-icon">&#128196;</div>
+                <div class="doc-info"><span>Presentation 1</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/slides/progress1-slides.pptx" class="doc-card reveal">
-                <div class="doc-icon">&#128224;</div>
-                <div class="doc-info"><span>Progress 1 Slides</span><small>Add your file here</small></div>
+            <a href="assets/docs/Presentations/presantation2.pdf" download class="doc-card reveal">
+                <div class="doc-icon">&#128196;</div>
+                <div class="doc-info"><span>Presentation 2</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/slides/progress2-slides.pptx" class="doc-card reveal">
-                <div class="doc-icon">&#128224;</div>
-                <div class="doc-info"><span>Progress 2 Slides</span><small>Add your file here</small></div>
+            <a href="assets/docs/Presentations/presantation3.pdf" download class="doc-card reveal">
+                <div class="doc-icon">&#128196;</div>
+                <div class="doc-info"><span>Presentation 3</span><small>Download PDF</small></div>
             </a>
-            <a href="assets/slides/final-slides.pptx" class="doc-card reveal">
+            <a href="#" class="doc-card reveal disabled">
                 <div class="doc-icon">&#128225;</div>
-                <div class="doc-info"><span>Final Presentation Slides</span><small>Add your file here</small></div>
+                <div class="doc-info"><span>Presentation 4</span><small>Will be added later</small></div>
             </a>
         </div>
     </section>
@@ -852,7 +814,7 @@
             <!-- Member 1 -->
             <div class="member-card reveal" data-module="cv">
                 <div class="member-card-top">
-                    <div class="member-module-icon">&#128202;</div>
+                    <a class="member-module-icon member-top-linkedin" href="https://www.linkedin.com/in/dushan-chanuka" target="_blank" rel="noopener noreferrer" aria-label="Dushan Chanuka LinkedIn">in</a>
                     <div class="member-photo-wrap">
                         <img src="assets/images/dushan.png" alt="Dushan Chanuka">
                     </div>
@@ -872,7 +834,7 @@
             <!-- Member 2 -->
             <div class="member-card reveal" data-module="3d">
                 <div class="member-card-top">
-                    <div class="member-module-icon">&#127979;</div>
+                    <a class="member-module-icon member-top-linkedin" href="https://www.linkedin.com/in/kaushal-silva-821a1831a" target="_blank" rel="noopener noreferrer" aria-label="Kaushal Silva LinkedIn">in</a>
                     <div class="member-photo-wrap">
                         <img src="assets/images/kaushal.jpeg" alt="Kaushal Silva">
                     </div>
@@ -892,7 +854,7 @@
             <!-- Member 3 -->
             <div class="member-card reveal" data-module="blockchain">
                 <div class="member-card-top">
-                    <div class="member-module-icon">&#128279;</div>
+                    <a class="member-module-icon member-top-linkedin" href="https://www.linkedin.com/in/chathuni-lelwala-5592192a7" target="_blank" rel="noopener noreferrer" aria-label="Chathuni Lelwala LinkedIn">in</a>
                     <div class="member-photo-wrap">
                         <img src="assets/images/chahuni.jpeg" alt="Chathuni Lelwala">
                     </div>
@@ -912,7 +874,7 @@
             <!-- Member 4 -->
             <div class="member-card reveal" data-module="recommender">
                 <div class="member-card-top">
-                    <div class="member-module-icon">&#129302;</div>
+                    <a class="member-module-icon member-top-linkedin" href="https://www.linkedin.com/in/tharushi-walpola-9b692036b" target="_blank" rel="noopener noreferrer" aria-label="Tharushi Walpola LinkedIn">in</a>
                     <div class="member-photo-wrap">
                         <img src="assets/images/tharushi.jpeg" alt="Tharushi Walpola">
                     </div>
@@ -945,22 +907,15 @@
                     <div class="contact-card reveal">
                         <div class="contact-icon">✉️</div>
                         <div>
-                            <p class="contact-label">General Enquiries</p>
-                            <p>contact@smartfarmer.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-card reveal">
-                        <div class="contact-icon">✉️</div>
-                        <div>
                             <p class="contact-label">Research Lead</p>
-                            <p>chathuniyasassri@gmail.com</p>
+                            <p><a href="mailto:chathuniyasassri@gmail.com" class="contact-link">chathuniyasassri@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-card reveal">
                         <div class="contact-icon">📞</div>
                         <div>
                             <p class="contact-label">Phone</p>
-                            <p>+94 77 483 7017</p>
+                            <p>94776183693</p>
                         </div>
                     </div>
                     <div class="contact-card reveal">
@@ -973,23 +928,23 @@
                 </div>
             </div>
             <div class="contact-form-col reveal">
-                <form class="contact-form" onsubmit="handleForm(event)">
+                <form id="contactForm" class="contact-form" onsubmit="handleForm(event)">
                     <h3>Send a Message</h3>
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label for="contactName">Your Name</label>
+                        <input id="contactName" name="name" type="text" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Enter your email" required>
+                        <label for="contactEmail">Email Address</label>
+                        <input id="contactEmail" name="email" type="email" placeholder="Enter your email" required>
                     </div>
                     <div class="form-group">
-                        <label>Subject</label>
-                        <input type="text" placeholder="What is this about?">
+                        <label for="contactSubject">Subject</label>
+                        <input id="contactSubject" name="subject" type="text" placeholder="What is this about?">
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea rows="4" placeholder="Your message..." required></textarea>
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" rows="4" placeholder="Your message..." required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message ✉️</button>
                     <p class="form-note" id="formMsg"></p>

@@ -30,6 +30,43 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
 });
 
+// ===================== DROPDOWN HOVER FIX =====================
+let dropdownTimeout;
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+    const content = dropdown.querySelector('.dropdown-content');
+    
+    dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(dropdownTimeout);
+        
+        // Close all other dropdowns
+        dropdowns.forEach(d => {
+            if (d !== dropdown) {
+                d.classList.remove('show');
+            }
+        });
+        
+        // Open this dropdown
+        dropdown.classList.add('show');
+    });
+    
+    dropdown.addEventListener('mouseleave', () => {
+        dropdownTimeout = setTimeout(() => {
+            dropdown.classList.remove('show');
+        }, 100); // Close after 100ms of leaving
+    });
+    
+    // Also close when clicking a link in the dropdown
+    if (content) {
+        content.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                dropdown.classList.remove('show');
+            });
+        });
+    }
+});
+
 // ===================== SCROLL REVEAL =====================
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -91,9 +128,34 @@ document.querySelectorAll('.mtab').forEach(tab => {
 // ===================== CONTACT FORM =====================
 function handleForm(e) {
     e.preventDefault();
+    const form = e.target;
     const msg = document.getElementById('formMsg');
-    msg.textContent = '✅ Message sent! We will get back to you shortly.';
-    e.target.reset();
+    const formData = new FormData(form);
+
+    const name = (formData.get('name') || '').toString().trim();
+    const email = (formData.get('email') || '').toString().trim();
+    const subjectRaw = (formData.get('subject') || '').toString().trim();
+    const message = (formData.get('message') || '').toString().trim();
+
+    if (!name || !email || !message) {
+        msg.textContent = 'Please fill in name, email, and message.';
+        return;
+    }
+
+    const subject = subjectRaw || 'Smart Farmer Website Enquiry';
+    const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        '',
+        'Message:',
+        message
+    ].join('\n');
+
+    const mailtoUrl = `mailto:chathuniyasassri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
+    msg.textContent = 'Opening your email app with a pre-filled draft...';
+    form.reset();
     setTimeout(() => { msg.textContent = ''; }, 5000);
 }
 

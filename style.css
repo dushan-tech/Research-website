@@ -81,7 +81,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 1.2rem;
 }
 
 .nav-links li a {
@@ -140,14 +140,17 @@ body {
 .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ===================== DROPDOWN ===================== */
-.dropdown { position: relative; }
+.dropdown { 
+    position: relative; 
+    display: inline-block;
+}
 
 .dropdown-content {
     display: block;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(-8px);
+    transform: translateX(-50%);
     background: rgba(13, 30, 18, 0.95);
     backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
@@ -155,15 +158,18 @@ body {
     min-width: 190px;
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--transition), transform var(--transition);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
     z-index: 999;
+    margin-top: 0;
 }
 
-.dropdown:hover .dropdown-content {
+/* Show dropdown when .show class is added by JS */
+.dropdown.show .dropdown-content {
     opacity: 1;
-    pointer-events: all;
-    transform: translateX(-50%) translateY(0);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .dropdown-content a {
@@ -676,6 +682,8 @@ tbody tr:hover td {
 }
 
 .contact-card p { font-size: 0.9rem; color: var(--text); font-weight: 500; }
+.contact-link { color: inherit; text-decoration: none; }
+.contact-link:hover { text-decoration: underline; }
 
 /* ===================== FOOTER ===================== */
 footer {
@@ -1588,6 +1596,19 @@ footer span { color: var(--accent); }
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
+}
+
+.member-top-linkedin {
+    background: #0a66c2 !important;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.member-top-linkedin:hover {
+    filter: brightness(1.08);
 }
 
 .member-photo-wrap {
